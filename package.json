@@ -1,0 +1,68 @@
+{
+  "name": "visualizer-validation-rules-salesforce",
+  "displayName": "Visualizer Validation Rules Salesforce (and Others Formulas)",
+  "description": "Allows you to View and Edit Salesforce Validation Rules Formulas and other Formulas Salesforce. (XML -> HTML and HTML -> XML)",
+  "version": "1.0.0",
+  "publisher": "DanielSena",
+  "engines": {
+    "vscode": "^1.100.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:extension.visualizeValidationRule",
+    "onCommand:extension.visualizeSelectionOnly"
+  ],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "extension.visualizeValidationRule",
+        "title": "VVR - VIEW/EDIT Validation Rules Salesforce"
+      },
+      {
+        "command": "extension.visualizeSelectionOnly",
+        "title": "VVR - VIEW/EDIT Selection Only (Other Formulas)"
+      }
+    ],
+    "menus": {
+      "editor/context": [
+        {
+          "command": "extension.visualizeValidationRule",
+          "when": "resourceLangId == xml",
+          "group": "navigation"
+        },
+        {
+          "command": "extension.visualizeSelectionOnly",
+          "when": "resourceLangId == xml",
+          "group": "navigation"
+        }
+      ],
+      "explorer/context": [
+        {
+          "command": "extension.visualizeValidationRule",
+          "when": "resourceLangId == xml",
+          "group": "navigation"
+        }
+      ]
+    },
+    "keybindings": [
+      {
+        "command": "extension.visualizeValidationRule",
+        "key": "Ctrl+Shift+V",
+        "when": "editorTextFocus"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "echo 'No build needed'",
+    "compile": "echo 'No compile step required'",
+    "lint": "eslint .",
+    "pretest": "npm run lint"
+  },
+  "devDependencies": {
+    "@vscode/test-cli": "^0.0.10",
+    "eslint": "^9.25.1"
+  }
+}
