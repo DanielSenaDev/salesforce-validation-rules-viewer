@@ -1,6 +1,7 @@
 {
+  "icon": "icon.png",
   "name": "visualizer-validation-rules-salesforce",
-  "displayName": "Visualizer Validation Rules Salesforce (and Others Formulas)",
+  "displayName": "VVR - Visualizer Validation Rules Salesforce (and Others Formulas)",
   "description": "Allows you to View and Edit Salesforce Validation Rules Formulas and other Formulas Salesforce. (XML -> HTML and HTML -> XML)",
   "version": "1.0.0",
   "publisher": "DanielSena",
