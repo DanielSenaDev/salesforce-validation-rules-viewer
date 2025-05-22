@@ -17,18 +17,18 @@ A Visual Studio Code extension to easily view and edit Salesforce Validation Rul
 
 | Description          | PrintScreen                                           |
 |----------------------|-------------------------------------------------------|
-| Validation Rules - 1 | ![Validation Rules - 1](images\ValidationRules-1.png) |
-| Validation Rules - 2 | ![Validation Rules - 1](images\ValidationRules-2.png) |
-| Validation Rules - 3 | ![Validation Rules - 1](images\ValidationRules-3.png) |
-| Validation Rules - 4 | ![Validation Rules - 1](images\ValidationRules-4.png) |
+| Validation Rules - 1 | ![Validation Rules - 1](images/ValidationRules-1.png) |
+| Validation Rules - 2 | ![Validation Rules - 1](images/ValidationRules-2.png) |
+| Validation Rules - 3 | ![Validation Rules - 1](images/ValidationRules-3.png) |
+| Validation Rules - 4 | ![Validation Rules - 1](images/ValidationRules-4.png) |
 
 ---
 
 ### 🖼️ View and Edit Others Formulas (Selection Only)
 | Description        | PrintScreen                                       |
 |--------------------|---------------------------------------------------|
-| Selection Only - 1 | ![Selection Only - 1](images\SelectionOnly-1.png) |
-| Selection Only - 2 | ![Selection Only - 1](images\SelectionOnly-2.png) |
+| Selection Only - 1 | ![Selection Only - 1](images/SelectionOnly-1.png) |
+| Selection Only - 2 | ![Selection Only - 1](images/SelectionOnly-2.png) |
 
 
 ## 📦 Requirements
