@@ -1,9 +1,9 @@
 {
   "icon": "icon.png",
-  "name": "visualizer-validation-rules-salesforce",
-  "displayName": "VVR - Visualizer Validation Rules Salesforce (and Others Formulas)",
+  "name": "salesforce-validation-rules-viewer",
+  "displayName": "SFVRV - Salesforce Validation Rules Viewer (and Others Formulas)",
   "description": "Allows you to View and Edit Salesforce Validation Rules Formulas and other Formulas Salesforce. (XML -> HTML and HTML -> XML)",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "publisher": "DanielSena",
   "engines": {
     "vscode": "^1.100.0"
@@ -13,49 +13,49 @@
     "url": "https://https://github.com/DanielSenaDev/visualizer-validation-rules-salesforce"
   },
   "categories": [
-    "Other"
+    "Visualization"
   ],
   "activationEvents": [
-    "onCommand:extension.visualizeValidationRule",
-    "onCommand:extension.visualizeSelectionOnly"
+    "onCommand:extension.validationRuleViewer",
+    "onCommand:extension.selectionOnlyViewer"
   ],
   "main": "./extension.js",
   "contributes": {
     "commands": [
       {
-        "command": "extension.visualizeValidationRule",
-        "title": "VVR - VIEW/EDIT Validation Rules Salesforce"
+        "command": "extension.validationRuleViewer",
+        "title": "SFVRV: 📋➡️ Validation Rules - View/Edit"
       },
       {
-        "command": "extension.visualizeSelectionOnly",
-        "title": "VVR - VIEW/EDIT Selection Only (Other Formulas)"
+        "command": "extension.selectionOnlyViewer",
+        "title": "SFVRV: Text Selection View/Edit"
       }
     ],
     "menus": {
       "editor/context": [
         {
-          "command": "extension.visualizeValidationRule",
+          "command": "extension.validationRuleViewer",
           "when": "resourceLangId == xml",
-          "group": "navigation"
+          "group": "SFVRV"
         },
         {
-          "command": "extension.visualizeSelectionOnly",
+          "command": "extension.selectionOnlyViewer",
           "when": "resourceLangId == xml",
-          "group": "navigation"
+          "group": "SFVRV"
         }
       ],
       "explorer/context": [
         {
-          "command": "extension.visualizeValidationRule",
+          "command": "extension.validationRuleViewer",
           "when": "resourceLangId == xml",
-          "group": "navigation"
+          "group": "SFVRV"
         }
       ]
     },
     "keybindings": [
       {
-        "command": "extension.visualizeValidationRule",
-        "key": "Ctrl+Shift+V",
+        "command": "extension.validationRuleViewer",
+        "key": "Ctrl+Shift+F9",
         "when": "editorTextFocus"
       }
     ]

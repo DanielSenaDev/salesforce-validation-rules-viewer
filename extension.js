@@ -1,23 +1,23 @@
 const vscode = require('vscode');
 
 function activate(context) {
-  let visualizeCommand = vscode.commands.registerCommand('extension.visualizeValidationRule', function () {
-    vscode.window.showInformationMessage('VVR - Opening View of "Validation Rule".');
+  let visualizeCommand = vscode.commands.registerCommand('extension.validationRuleViewer', function () {
+    vscode.window.showInformationMessage('SFVRV - Opening View of "Validation Rule".');
     openWebview(true, context);
   });
 
-  let visualizeSelectionOnlyCommand = vscode.commands.registerCommand('extension.visualizeSelectionOnly', function () {
-    vscode.window.showInformationMessage('VVR - Opening View of "Selection Only".');
+  let selectionOnlyViewerCommand = vscode.commands.registerCommand('extension.selectionOnlyViewer', function () {
+    vscode.window.showInformationMessage('SFVRV - Opening View of "Selection Only".');
     openWebview(false, context);
   });
 
-  context.subscriptions.push(visualizeCommand, visualizeSelectionOnlyCommand);
+  context.subscriptions.push(visualizeCommand, selectionOnlyViewerCommand);
 }
 
 function openWebview(isValidationRule, context) {
   const editor = vscode.window.activeTextEditor;
   if (!editor) {
-    vscode.window.showErrorMessage('VVR - No editor active. Open an XML file.');
+    vscode.window.showErrorMessage('SFVRV - No editor active. Open an XML file.');
     return;
   }
 
@@ -27,14 +27,14 @@ function openWebview(isValidationRule, context) {
 
   if (!isValidationRule) {
     if (selection.isEmpty) {
-      vscode.window.showErrorMessage('VVR - Nothing selected.');
+      vscode.window.showErrorMessage('SFVRV - Nothing selected.');
       return;
     }
   } else {
     fullText = document.getText();
     const hasFormulaTag = /<errorConditionFormula>([\s\S]*?)<\/errorConditionFormula>/.test(fullText);
     if (!hasFormulaTag) {
-      vscode.window.showErrorMessage('VVR - "errorConditionFormula" Validation Rule not found.');
+      vscode.window.showErrorMessage('SFVRV - "errorConditionFormula" Validation Rule not found.');
       return;
     }
   }
@@ -48,7 +48,7 @@ function openWebview(isValidationRule, context) {
 
   const panel = vscode.window.createWebviewPanel(
     'metadataPreview',
-    isValidationRule ? 'Validation Rule - PREVIEW' : 'Metadata Selection - PREVIEW',
+    isValidationRule ? 'SFVRV - Validation Rule' : 'SFVRV - Text Selected',
     vscode.ViewColumn.Active,
     {
       enableScripts: true,
@@ -66,7 +66,7 @@ function openWebview(isValidationRule, context) {
         const newFormula = escapeHtmlToXml(message.text);
 
         if (!editor) {
-          vscode.window.showErrorMessage('VVR - No active editor to save the formula.');
+          vscode.window.showErrorMessage('SFVRV - No active editor to save the formula.');
           return;
         }
 
@@ -90,7 +90,7 @@ function openWebview(isValidationRule, context) {
         } else {
           // Substitui apenas o texto selecionado
           if (selection.isEmpty) {
-            vscode.window.showErrorMessage('VVR - No text selected to replace.');
+            vscode.window.showErrorMessage('SFVRV - No text selected to replace.');
             return;
           }
           edit.replace(document.uri, selection, newFormula);
@@ -98,10 +98,10 @@ function openWebview(isValidationRule, context) {
 
         const success = await vscode.workspace.applyEdit(edit);
         if (success) {
-          vscode.window.showInformationMessage('VVR - Content updated successfully.');
+          vscode.window.showInformationMessage('SFVRV - Content updated successfully.');
           await document.save();
         } else {
-          vscode.window.showErrorMessage('VVR - Failed to update the content.');
+          vscode.window.showErrorMessage('SFVRV - Failed to update the content.');
         }
       }
     },
