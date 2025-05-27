@@ -1,7 +1,11 @@
 name: Build VS Code Extension and Create Release
 
 on:
-  workflow_dispatch: 
+  workflow_dispatch:
+    inputs:
+      tag_name:
+        description: 'Git tag to create the release from (Ex.: v1.0.3)'
+        required: true
 
 jobs:
   build-and-package:
@@ -25,6 +29,7 @@ jobs:
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v1
         with:
+          tag_name: ${{ github.event.inputs.tag_name }}
           files: '*.vsix'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
