@@ -1,11 +1,7 @@
 name: Build VS Code Extension and Create Release
 
 on:
-  push:
-    branches:
-      - main
-    tags:
-      - 'v*'  # Ex: v1.0.3
+  workflow_dispatch: 
 
 jobs:
   build-and-package:
