@@ -23,6 +23,13 @@ jobs:
       - name: Install dependencies
         run: npm install
 
+      - name: Create Git tag
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git tag ${{ github.event.inputs.tag_name }}
+          git push origin ${{ github.event.inputs.tag_name }}
+
       - name: Package VS Code extension
         run: npx @vscode/vsce package
 
