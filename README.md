@@ -70,4 +70,4 @@ Visual Studio Code Extension Manager: ```npm install @vscode/vsce```
 
 ```npm install``` to install the dependencies
 
-```vsce package``` to generate the packages
+```vsce package``` to generate the packages (or Run action in github: package-extension.yml)
