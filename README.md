@@ -66,7 +66,7 @@ Activate commands via `Ctrl+Shift+P` and typing the command name.
 Contributions are welcome!
 Feel free to open issues, pull requests, or suggest improvements.
 
-Visual Studio Code Extension Manager: ```npm install -g vsce```
+Visual Studio Code Extension Manager: ```npm install @vscode/vsce```
 
 ```npm install``` to install the dependencies
 
