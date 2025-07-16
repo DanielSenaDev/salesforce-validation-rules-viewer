@@ -1,19 +1,25 @@
 {
   "icon": "icon.png",
   "name": "visualizer-validation-rules-salesforce",
-  "displayName": "VVR - Visualizer Validation Rules Salesforce (and Others Formulas)",
+  "displayName": "(deprecated) - VVR - Visualizer Validation Rules Salesforce (and Others Formulas)",
   "description": "Allows you to View and Edit Salesforce Validation Rules Formulas and other Formulas Salesforce. (XML -> HTML and HTML -> XML)",
-  "version": "1.0.0",
+  "version": "1.0.2",
+  "deprecated": "This extension is deprecated. Use the [**SFVRV - Salesforce Validation Rules Viewer (and Others Formulas)**](https://marketplace.visualstudio.com/items?itemName=DanielSena.salesforce-validation-rules-viewer) extension instead",
   "publisher": "DanielSena",
   "engines": {
     "vscode": "^1.100.0"
   },
   "repository": {
     "type": "git",
-    "url": "https://https://github.com/DanielSenaDev/visualizer-validation-rules-salesforce"
+    "url": "https://github.com/DanielSenaDev/salesforce-validation-rules-viewer/tree/VRR"
   },
   "categories": [
     "Other"
+  ],
+  "keywords": [
+    "Salesforce",
+    "Validation Rules",
+    "Deprecated"
   ],
   "activationEvents": [
     "onCommand:extension.visualizeValidationRule",

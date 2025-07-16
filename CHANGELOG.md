@@ -1,9 +1,12 @@
-# Change Log
+## [1.0.2]
 
-All notable changes to the "visualizer-validation-rules-salesforce" extension will be documented in this file.
+- We changed the name/repo from VRR to SFVRV.
+- This extension is deprecated. Use the [**SFVRV - Salesforce Validation Rules Viewer (and Others Formulas)**](https://marketplace.visualstudio.com/items?itemName=DanielSena.salesforce-validation-rules-viewer) extension instead.
 
-Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
+## [1.0.1]
 
-## [Unreleased]
+- Fix doc and icon
+
+## [1.0.0]
 
 - Initial release

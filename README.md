@@ -1,6 +1,15 @@
-# Visualizer Validation Rules Salesforce
+# VVR - Visualizer Validation Rules Salesforce (deprecated)
 
 A Visual Studio Code extension to easily view and edit Salesforce Validation Rules formulas in XML format.
+
+----
+
+> **Warning**
+> # This extension is deprecated.
+> - We changed the name from VRR to SFVRV.
+> - This extension is deprecated. Use the [**SFVRV - Salesforce Validation Rules Viewer (and Others Formulas)**](https://marketplace.visualstudio.com/items?itemName=DanielSena.salesforce-validation-rules-viewer) extension instead.
+
+-----
 
 ## ⚙️ Features
 
