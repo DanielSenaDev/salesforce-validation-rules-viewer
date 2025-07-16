@@ -1,9 +1,9 @@
 {
-  "icon": "icon.png",
+  "icon": "media/icon.png",
   "name": "salesforce-validation-rules-viewer",
   "displayName": "SFVRV - Salesforce Validation Rules Viewer (and Others Formulas)",
   "description": "Allows you to View and Edit Salesforce Validation Rules Formulas and other Formulas Salesforce. (XML -> HTML and HTML -> XML)",
-  "version": "1.0.2",
+  "version": "0.0.1",
   "publisher": "DanielSena",
   "engines": {
     "vscode": "^1.100.0"
